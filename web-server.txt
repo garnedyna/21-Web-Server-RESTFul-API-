@@ -1,0 +1,50 @@
+Apa perbedaan antara static web server dan dynamic web server?
+Jelaskan arsitektur static site dan dynamic site
+Apa saja yang dapat kita buat pada sisi server?
+Mohon jelaskan apa itu RESTful?
+Apa saja jenis HTTP verbs yang ada (jelaskan fungsinya masing-masing)
+Apa fungsi dari Response Codes?
+
+Jawab :
+1. Website Dinamis (Dynamic Website) : jenis halaman web yang disusun oleh konten dan layout yang kaya akan informasi didalamnya. 
+website Statis (Static Website) : sebuah website yang kontennya statis / tidak berubah-ubah. 
+2. arsitektur static site : Web server yang berfungsi untuk menerima permintaan (request) dan mengirimkan perimntaan (response) melalui HTTP atau HTTPS dalam bentuk halaman-halaman web yang umumnya berbentuk dokumen HTML.
+arsitektur dynamic site : suatu gateway yang bernama Server Side Scripting  yang merupakan sebuah teknologi scripting atau pemrograman web dimana script.
+3.- Penyimpanan dan pengiriman informasi yang efisien
+Bayangkan berapa banyak produk yang tersedia di Amazon, dan bayangkan berapa banyak posting yang telah ditulis di Facebook? Membuat halaman statis terpisah untuk setiap produk atau posting akan sangat tidak praktis.
+- Pengalaman pengguna yang disesuaikan
+Server dapat menyimpan dan menggunakan informasi tentang klien untuk memberikan pengalaman pengguna yang nyaman dan disesuaikan. Misalnya, banyak situs menyimpan kartu kredit sehingga detailnya tidak perlu dimasukkan lagi. Situs seperti Google Maps dapat menggunakan lokasi tersimpan atau saat ini untuk memberikan informasi perutean, dan penelusuran atau riwayat perjalanan untuk menyoroti bisnis lokal di hasil penelusuran.
+- Akses terkontrol ke konten
+Pemrograman sisi server memungkinkan situs untuk membatasi akses ke pengguna yang berwenang dan hanya menyajikan informasi yang diizinkan untuk dilihat oleh pengguna.
+Jejaring sosial seperti Facebook memungkinkan pengguna untuk sepenuhnya mengontrol data mereka sendiri tetapi hanya mengizinkan teman mereka untuk melihat atau mengomentarinya. Pengguna menentukan siapa yang dapat melihat data mereka, dan dengan ekstensi, data siapa yang muncul di feed mereka — otorisasi adalah bagian utama dari pengalaman pengguna!
+- Simpan informasi sesi/status
+Pemrograman sisi server memungkinkan pengembang untuk menggunakan sesi — pada dasarnya, sebuah mekanisme yang memungkinkan server untuk menyimpan informasi tentang pengguna situs saat ini dan mengirim tanggapan berbeda berdasarkan informasi tersebut.
+Ini memungkinkan, misalnya, sebuah situs untuk mengetahui bahwa pengguna sebelumnya telah masuk dan menampilkan tautan ke email atau riwayat pesanan mereka, atau mungkin menyimpan status permainan sederhana sehingga pengguna dapat kembali ke situs dan melanjutkan di mana mereka meninggalkannya.
+- Pemberitahuan dan komunikasi
+Server dapat mengirim pemberitahuan umum atau khusus pengguna melalui situs web itu sendiri atau melalui email, SMS, pesan instan, percakapan video, atau layanan komunikasi lainnya.
+a) Facebook dan Twitter mengirim email dan pesan SMS untuk memberi tahu Anda tentang komunikasi baru.
+b) Amazon secara teratur mengirimkan email produk yang menyarankan produk serupa dengan yang sudah dibeli atau dilihat yang mungkin menarik bagi Anda.
+- Analisis data
+Sebuah situs web dapat mengumpulkan banyak data tentang pengguna: apa yang mereka cari, apa yang mereka beli, apa yang mereka rekomendasikan, berapa lama mereka berada di setiap halaman. Pemrograman sisi server dapat digunakan untuk memperbaiki tanggapan berdasarkan analisis data ini.
+Amazon dan Google sama-sama mengiklankan produk berdasarkan pencarian sebelumnya (dan pembelian)
+4. RESTful API / REST API merupakan implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data.
+5. HTTP Verbs
+Setiap request yang dilakukan terdapat metode yang dipakai agar server mengerti apa yang sedang di request client
+- GET :metode HTTP Request yang paling simpel, metode ini digunakan untuk membaca atau mendapatkan data dari sumber.
+- POST : metode HTTP Request yang digunakan untuk membuat data baru dengan menyisipkan data dalam body saat request dilakukan.
+- PUT : metode HTTP Request yang biasanya digunakan untuk melakukan update data resource.
+- DELETE : metode HTTP Request yang digunakan untuk menghapus suatu data pada resource.
+6. Response dari server berisi kode status untuk memperingatkan klien tentang informasi tentang keberhasilan operasi. Sebagai pengembang, Anda tidak perlu mengetahui setiap kode status (ada banyak di antaranya), tetapi Anda harus mengetahui kode yang paling umum dan cara penggunaannya.
+Kode Status >> Artinya
+200 (OK) >> Ini adalah respons standar untuk permintaan HTTP yang berhasil.
+201 (CREATED) >> Ini adalah respons standar untuk permintaan HTTP yang menghasilkan item yang berhasil dibuat.
+204 (NO CONTENT) >> Ini adalah respons standar untuk permintaan HTTP yang berhasil, di mana tidak ada yang dikembalikan di badan respons.
+400 (BAD REQUEST) >> Permintaan tidak dapat diproses karena sintaks permintaan yang buruk, ukuran yang berlebihan, atau kesalahan klien lainnya.
+403 (FORBIDDEN) >> Klien tidak memiliki izin untuk mengakses sumber daya ini.
+404 (NOT FOUND) >> Sumber daya tidak dapat ditemukan saat ini. Mungkin sudah dihapus, atau belum ada.
+500 (INTERNAL SERVER ERROR) >> Jawaban umum untuk kegagalan tak terduga jika tidak ada informasi spesifik yang tersedia.
+Untuk setiap HTTP Verbs, ada kode status yang diharapkan yang harus dikembalikan server setelah berhasil:
+GET — return 200 (OK)
+POST — return 201 (CREATED)
+PUT — return 200 (OK)
+DELETE — return 204 (NO CONTENT) Jika operasi gagal, kembalikan kode status paling spesifik yang mungkin terkait dengan masalah yang ditemui.
